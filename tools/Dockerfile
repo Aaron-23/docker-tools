@@ -2,7 +2,7 @@ FROM ubuntu:24.04
 
 WORKDIR /workdir
 
-ADD ubuntu.sources  /etc/apt/sources.list.d/ubuntu.sources
+#ADD ubuntu.sources  /etc/apt/sources.list.d/ubuntu.sources
 ADD docker-entrypoint.sh  /run/docker-entrypoint.sh
 
 RUN apt-get update \
