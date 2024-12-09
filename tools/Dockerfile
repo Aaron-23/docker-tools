@@ -22,7 +22,7 @@ RUN apt-get update && \
         dnsutils \
         vim \
         procps \
-        sysbench 
+        sysbench \
         rsyncd && \
     ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
