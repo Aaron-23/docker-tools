@@ -24,7 +24,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
+          context: ./tools/  # Dockerfile 和构建上下文在 docker 目录
+          file: './tools/Dockerfile'
           platforms: linux/arm64,linux/amd64
           push: true
           tags: registry.cn-beijing.aliyuncs.com/airspace/op-tools:ubuntu_24.04
-          file: './tools/Dockerfile'
