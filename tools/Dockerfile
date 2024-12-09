@@ -1,8 +1,8 @@
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 
 WORKDIR /workdir
-ENV TZ="Asia/Shanghai"
-ADD sources.list  /etc/apt/sources.list
+
+ADD ubuntu.sources  /etc/apt/sources.list.d/ubuntu.sources
 ADD docker-entrypoint.sh  /run/docker-entrypoint.sh
 
 RUN apt-get update \
@@ -15,6 +15,7 @@ RUN apt-get update \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/* 
 
+ENV TZ="Asia/Shanghai"
 ENV LANG en_US.utf8
 ENV SLEEP 9999999999999
 
