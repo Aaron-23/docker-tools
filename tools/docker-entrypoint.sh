@@ -2,6 +2,8 @@
 set -e
 
 alias ll='ls -l' 
-# pause
-echo "Pausing for ${SLEEP:-0} seconds..."
-sleep ${SLEEP:-0}
+# 执行其他的启动命令或逻辑
+echo "Container started..."
+
+# 让容器保持运行
+tail -f /dev/null

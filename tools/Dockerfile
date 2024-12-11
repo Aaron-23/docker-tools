@@ -37,9 +37,6 @@ RUN apt-get update && \
 ENV TZ="Asia/Shanghai"
 ENV LANG="en_US.UTF-8"
 
-# 定义休眠时长（避免默认行为可以通过 ENTRYPOINT 参数覆盖）
-ENV SLEEP=9999999999999
-
 # 定义持久化目录
 VOLUME /workdir
 
