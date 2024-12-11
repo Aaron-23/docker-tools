@@ -6,4 +6,4 @@ alias ll='ls -l'
 echo "Container started..."
 
 # 让容器保持运行
-tail -f /dev/null
+nohup tail -f /dev/null &
