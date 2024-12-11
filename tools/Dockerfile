@@ -23,6 +23,9 @@ RUN apt-get update && \
         vim \
         procps \
         sysbench \
+        ab \
+        iperf3 \
+        wrk \
         rsync && \
     ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
