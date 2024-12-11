@@ -23,7 +23,7 @@ RUN apt-get update && \
         vim \
         procps \
         sysbench \
-        ab \
+        apache2-utils \
         iperf3 \
         wrk \
         rsync && \
