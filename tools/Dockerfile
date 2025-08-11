@@ -26,6 +26,7 @@ RUN apt-get update && \
         apache2-utils \
         iperf3 \
         wrk \
+        stress \
         rsync && \
     ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
