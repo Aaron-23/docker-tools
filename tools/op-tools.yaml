@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: op-tools
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: op-tools
+  template:
+    metadata:
+      labels:
+        app: op-tools
+    spec:
+      containers:
+      - name: op-tools-container
+        image: <image name>
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: "1000m"
+            memory: "2048Mi"
+          requests:
+            cpu: "250m"
+            memory: "1024Mi"
